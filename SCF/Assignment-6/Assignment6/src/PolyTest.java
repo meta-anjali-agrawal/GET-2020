@@ -14,6 +14,15 @@ public class PolyTest
 		fail("Array is Empty.");
 	}
 	
+	@Test (expected = AssertionError.class)
+	public void Test1()
+	{
+		Poly poly = new Poly(new int[][]{{0,1},{2,3}});
+		double resultEvalute = poly.evaluate(2);
+		assertEquals(49.0, resultEvalute, 0.00);
+		fail("Enter non zero coeff");
+	}
+	
 	@Test
 	public void evaluateTest()
 	{
@@ -46,7 +55,7 @@ public class PolyTest
 		Poly poly = new Poly(new int[][]{{4,3},{3,2},{2,1},{1,0}});
 		Poly poly2 = new Poly(new int[][]{{2,2},{1,1}});
 		Poly resultMultiplyPoly = poly.multiplyPoly(poly, poly2);
-		Poly expected = new Poly(new int[][]{{8,5},{10,4},{0,0},{7,3},{0,0},{4,2},{0,0},{1,1}});
+		Poly expected = new Poly(new int[][]{{8,5},{10,4},{7,3},{4,2},{1,1}});
 		assertArrayEquals(expected.polyInput, resultMultiplyPoly.polyInput);
 	}
 	

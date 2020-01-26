@@ -1,15 +1,25 @@
+/*
+ * @author Anjali
+ * The immutable class intSet using an array to represent a set of integers in the range 1-1000.
+ */
 import java.util.Arrays;
 
 final class IntSet 
 {
 	final int[] inputArray;
 	
+	/**
+	 * Parameterized Constructor 
+	 * @param set, integer type array
+	 */
 	IntSet(int[] set)
 	{
 		if(set.length == 0)
 			throw new AssertionError("Array is Empty");
 		for(int i=0 ; i<set.length-1 ; i++)
 		{
+			if(set[i]<=0 || set[i]>1000)
+				throw new AssertionError("Value inside input array should be between 1 to 1000.");
 			for(int j=i+1 ; j<set.length ; j++)
 			{
 				if(set[i]== set[j])
@@ -19,6 +29,11 @@ final class IntSet
 		inputArray = set;	
 	}
 	
+	/**
+	 * Method checks whether x is a member of the set and return a boolean value
+	 * @param x, element needed to be checked
+	 * @return boolean value true when x is the member, else false
+	 */
 	public boolean isMember(int x)
 	{
 		for(int i=0 ; i<inputArray.length ; i++)
@@ -29,11 +44,20 @@ final class IntSet
 		return false;
 	}
 	
+	/**
+	 * Method return the size of the set
+	 * @return integer type value,  size of the set
+	 */
 	public int size()
 	{
 		return inputArray.length;
 	}
 	
+	/**
+	 * Method checks whether s is a subset of the set
+	 * @param s, IntSet type input
+	 * @return boolean, true when s is the Subset, else false
+	 */
 	public boolean isSubset(IntSet s)
 	{
 		for(int i=0 ; i<inputArray.length ; i++)
@@ -51,6 +75,10 @@ final class IntSet
 		return false;
 	}
 	
+	/**
+	 * Method return the complement set, you can assume that 1..1000 is the universal set
+	 * @return integer array, the complement set
+	 */
 	public int[] getComplement()
 	{
 		boolean flag = false;
@@ -73,6 +101,12 @@ final class IntSet
 		return complementSet;
 	}
 	
+	/**
+	 * Method return the union of s1 and s2
+	 * @param s1, IntSet type set as an input
+	 * @param s2, IntSet type set as an input
+	 * @return IntSet type set, union of s1 and s2
+	 */
 	public IntSet union(IntSet s1, IntSet s2)
 	{
 		int[] result = new int[s1.size()+s2.size()];

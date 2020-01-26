@@ -21,6 +21,15 @@ public class IntSetTest
 		fail("Array is Empty");
 	}
 	
+	@Test (expected = AssertionError.class)
+	public void Test2()
+	{
+		IntSet intSet = new IntSet(new int[]{0,1,2,3,4,5,6,7,8,10});
+		boolean resultIsMember = intSet.isMember(1);
+		assertEquals(true, resultIsMember);
+		fail("Value inside input array should be between 1 to 1000.");
+	}
+	
 	@Test 
 	public void isMemberTest()
 	{
