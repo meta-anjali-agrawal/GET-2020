@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MetaCube Parking System</title>
+    <link rel="stylesheet" href="Assignment9.css">
+    <script src="Assignment9.js"></script>
+</head>
+
+<body>
+    <div class="heading">
+        <h1 class="meta">Meta</h1>
+        <h1 class="cube">Cube </h1>
+        <h1 class="meta"> Parking System</h1>
+    </div>
+    <div>
+        <form id="personalInfoForm">
+            <fieldset id="fieldset1">
+                <legend id="legend">Personal Information:</legend>
+                <!-- First Name: </br> -->
+                <div id="messages">
+                    <span>Enter your Full Name:</span>
+                </div>
+                <div id="empName">
+                    <input class="form1" id="fname" type="text" name="firstname" placeholder="Full Name"></br>
+                </div>
+                <!-- Last Name: </br> -->
+                <!-- <input class="form1" type="text" name="lastname" placeholder="Last Name"></br> -->
+                <!-- Gender: -->
+                <div id="empGender" style="display: none;">
+                    <label><input class="input-radio" type="radio" id="Male" name="gender" value="Male">Male</label>
+                    <label><input class="input-radio" type="radio" id="Female" name="gender" value="Female">Female</label>
+                    <label><input class="input-radio" type="radio" id="Other" name="gender" value="Other">Other</label></br>
+                </div>
+                <!-- </br>Email id: </br> -->
+                <div id="empMail" style="display: none;">
+                    <input class="form1" id="empEmail" type="email" placeholder="Email"></br>
+                </div>
+                <!-- Password: </br> -->
+                <div id="Password" style="display: none;">
+                    <input class="form1" id="empPassword" type="password" placeholder="Password" onkeyup="passwordValidation()"></br>
+                </div>
+                <!-- Confirm Password: </br> -->
+                <div id="empConfirmPassword" style="display: none;">
+                    <input class="form1" id="confirmPassword" type="password" placeholder="Confirm Password"></br>
+                </div>
+                <!-- Contact Number: </br> -->
+                <div id="empNumber" style="display: none;">
+                    <input class="form1" id="empPhoneNumber" type="number" placeholder="Contact Number" required></br>
+                </div>
+                <div class="buttons">
+                    <div>
+                        <input class="input-button" type="submit" value="Submit" onclick="return empRegister()">
+                    </div>
+                    <div style="display: none;">
+                        <input class="input-button" type="reset"></br>
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+    <div>
+        <form id="vehicleForm">
+            <fieldset style="display: none;" id="fieldset2">
+                <legend id="legend">Vehicle Details:</legend>
+                <div id="vehicleMessages">
+                    <span>Enter your Vehicle Name:</span>
+                </div>
+                <!-- Vehicle Name: </br> -->
+                <div>
+                    <input class="form1" id="vehicleName" type="text" placeholder="Name"></br>
+                </div>
+                <div id="vehicleType" style="display: none;">
+                    <!-- Type: </br> -->
+                    <select class="input-dropdown" id="type" name="type">
+                    <option>Cycle</option>
+                    <option>MotorCycle</option>
+                    <option>Four Wheelers</option>
+                    </select class="form1"></br>
+                </div>
+                <!-- Vehicle number </br> -->
+                <div id="vNumber" style="display: none;">
+                    <input class="form1" id="vehicleNumber" type="text" placeholder="Vehicle Number" required></br>
+                </div>
+                <!-- Employee Id: </br> -->
+                <div style="display: none;">
+                    <input class="form1" id="employeeId" type="text" placeholder="Employee Id" readonly></br>
+                </div>
+                <!-- Identification: </br> -->
+                <div id="identity" style="display: none;">
+                    <textarea class="form1" id="identification" placeholder="Identification" rows="3" required></textarea class="form1"></br>
+                </div>
+                <input class="input-button" type="submit" value="Submit" onclick="vehicleRegister()">
+                <input style="display: none;" class="input-button" type="reset"></br>
+            </fieldset>
+        </form>
+    </div>
+
+    <div>
+        <form>
+            <fieldset id="fieldset3"  style="display: none;">
+                <legend id="legend">Passes:</legend>
+                <label><input class="input-radio" id="daily_r" type="radio" name="pass" value="daily">Daily</label>
+                <input type="text" class="form3" id="daily" placeholder="00" disabled></br>
+                <label><input class="input-radio" id="monthly_r" type="radio" name="pass" value="monthly">Monthly</label>
+                <input type="text" class="form3" placeholder="00" id="monthly" disabled></br>
+                <label><input class="input-radio" id="yearly_r" type="radio" name="pass" value="Yearly">Yearly</label>
+                <input type="text" class="form3" placeholder="00" id="yearly" disabled></br></br>
+                
+                <input type="button" class="currency" id="currency1" value="INR" onclick="displayChargers('inr')">
+                <input type="button" class="currency" id="currency2" value="USD" onclick="displayChargers('usd')">
+                <input type="button" class="currency" id="currency3" value="YEN" onclick="displayChargers('yen')"></br>
+
+                <input class="input-button" type="submit" value="Get Pass" onclick="getPass()">
+            </fieldset>
+        </form>
+    </div>
+    <div>
+        <form>
+
+        </form>
+    </div>
+
+</body>
+
+</html>

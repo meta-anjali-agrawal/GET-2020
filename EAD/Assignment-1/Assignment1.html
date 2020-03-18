@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MetaCube Parking System</title>
+    <style>
+        body {
+            background-color: rgb(234, 238, 253);
+        }
+        
+        .heading {
+            text-align: center;
+            background-color: black;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .meta {
+            color: white;
+            display: inline-block;
+        }
+        
+        .cube {
+            color: rgb(0, 169, 227);
+            display: inline-block;
+        }
+        
+        #legend {
+            font-size: xx-large;
+            padding-bottom: 20px;
+        }
+        
+        fieldset {
+            background-color: white;
+            width: 70%;
+            margin: auto;
+            font-size: large;
+        }
+        
+        form {
+            width: 70%;
+            margin: auto;
+            padding-bottom: 50px;
+        }
+        
+        .form1 {
+            width: 70%;
+            margin: 10px 10px;
+            padding-left: 175px;
+            border-radius: 30px 15px;
+            height: 25px;
+        }
+        
+        .form3 {
+            width: 30%;
+            margin: 10px 10px;
+            padding-left: 175px;
+            border-radius: 30px;
+            height: 25px;
+        }
+        
+        .input-dropdown {
+            width: 97%;
+            margin: 10px 10px;
+            padding-left: 175px;
+            border-radius: 50px 15px;
+            height: 25px;
+        }
+        
+        .input-radio {
+            margin: 10px 55px;
+            width: auto;
+        }
+        
+        .currency {
+            margin: 10px 17px;
+            width: calc(50%-50px);
+            padding: 10px 70px;
+            border-radius: 15px;
+            background-color: rgb(73, 213, 68);
+        }
+        
+        .input-button {
+            margin: 10px 65px;
+            width: calc(50%-50px);
+            padding: 10px 70px;
+            border-radius: 15px;
+            background-color: rgb(68, 115, 213);
+        }
+    </style>
+    <script>
+        var employeeId = 0;
+        var vehicleType;
+
+        function empRegister() {
+
+            var name = document.getElementById("fname").value;
+            var password = document.getElementById("empPassword").value;
+            var confirmPassword = document.getElementById("confirmPassword").value;
+            var email = document.getElementById("empEmail").value;
+            var phoneNumber = document.getElementById("empPhoneNumber").value;
+            var letters = /^[a-zA-Z]+$/;
+            var regexPassword = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{8,}$/;
+            var numbers = /^[+]?[0-9]+$/;
+
+            if (name.length <= 2 || !(letters.test(name))) {
+
+                document.getElementById("fname").style.borderColor = "red";
+                document.getElementById("fname").style.borderWidth = "3px";
+
+                return false;
+            } else {
+                document.getElementById("fname").style.borderColor = "dimgray";
+                document.getElementById("fname").style.borderWidth = "0.5px";
+            }
+            if (email.length < 4 || !(email.includes("@"))) {
+
+                document.getElementById("empEmail").style.borderColor = "red";
+                document.getElementById("empEmail").style.borderWidth = "3px";
+                return false;
+            } else {
+                document.getElementById("empEmail").style.borderColor = "dimgray";
+                document.getElementById("empEmail").style.borderWidth = "0.5px";
+            }
+            if (!(password.match(regexPassword))) {
+                document.getElementById("empPassword").style.borderColor = "red";
+                document.getElementById("empPassword").style.borderWidth = "3px";
+                alert("Enter a password with atleast one lowercase character, one uppercase character, one alphanumeric character and minimum length of 8.")
+                return false;
+            } else {
+                document.getElementById("empPassword").style.borderColor = "dimgray";
+                document.getElementById("empPassword").style.borderWidth = "0.5px";
+            }
+            if (password != confirmPassword) {
+                alert("passwords do not match");
+                document.getElementById("confirmPassword").style.borderColor = "red";
+                document.getElementById("confirmPassword").style.borderWidth = "3px";
+                return false;
+            } else {
+                document.getElementById("confirmPassword").style.borderColor = "dimgray";
+                document.getElementById("confirmPassword").style.borderWidth = "0.5px";
+            }
+            if (phoneNumber.length < 8 || !(phoneNumber.match(numbers))) {
+                document.getElementById("empPhoneNumber").style.borderColor = "red";
+                document.getElementById("empPhoneNumber").style.borderWidth = "3px";
+                return false;
+            } else {
+                document.getElementById("empPhoneNumber").style.borderColor = "dimgray";
+                document.getElementById("empPhoneNumber").style.borderWidth = "0.5px";
+            }
+
+            employeeId++;
+            document.getElementById("fieldset1").innerHTML = "Thanks! " + name + " for registration. Your Employee Id is M20/" + employeeId;
+            document.getElementById("employeeId").value = "M20/ " + employeeId;
+
+            return true;
+        }
+
+        function vehicleRegister() {
+            vehicleType = document.getElementById("type").value;
+            var vehicleNumber = document.getElementById("vehicleNumber").value;
+            document.getElementById("fieldset2").innerHTML = "Vehicle number " + vehicleNumber + " registered successfully.";
+            displayChargers();
+        }
+
+        function displayChargers(currency) {
+            var factor = 1;
+
+            if (currency == "inr") {
+                factor = 1;
+            } else if (currency == "usd") {
+                factor = 0.014;
+            } else if (currency == "yen") {
+                factor = 0.65;
+            }
+
+            if (vehicleType == "Cycle") {
+                document.getElementById("daily").value = (5 * factor).toFixed(2);
+                document.getElementById("monthly").value = (100 * factor).toFixed(2);
+                document.getElementById("yearly").value = (500 * factor).toFixed(2);
+            } else if (vehicleType == "MotorCycle") {
+                document.getElementById("daily").value = (10 * factor).toFixed(2);
+                document.getElementById("monthly").value = (200 * factor).toFixed(2);
+                document.getElementById("yearly").value = (1000 * factor).toFixed(2);
+
+            } else if (vehicleType == "Four Wheelers") {
+                document.getElementById("daily").value = (20 * factor).toFixed(2);
+                document.getElementById("monthly").value = (500 * factor).toFixed(2);
+                document.getElementById("yearly").value = (3500 * factor).toFixed(2);
+
+            }
+        }
+
+        function getPass() {
+            var pass;
+            if (document.getElementById('daily_r').checked) {
+                pass = document.getElementById("daily").value;
+            } else if (document.getElementById('monthly_r').checked) {
+                pass = document.getElementById("monthly").value;
+            } else if (document.getElementById('yearly_r').checked) {
+                pass = document.getElementById("yearly").value;
+            }
+            document.getElementById("fieldset3").innerHTML = "Pay: " + pass;
+        }
+    </script>
+</head>
+
+<body>
+    <div class="heading">
+        <h1 class="meta">Meta</h1>
+        <h1 class="cube">Cube </h1>
+        <h1 class="meta"> Parking System</h1>
+    </div>
+    <div>
+        <form id="personalInfoForm">
+            <fieldset id="fieldset1">
+                <legend id="legend">Personal Information:</legend>
+                First Name: </br>
+                <input class="form1" id="fname" type="text" name="firstname" placeholder="First Name" required></br>
+                Last Name: </br>
+                <input class="form1" type="text" name="lastname" placeholder="Last Name"></br>
+                Gender:
+                <label><input class="input-radio" type="radio" name="gender" value="Male">Male</label>
+                <label><input class="input-radio" type="radio" name="gender" value="Female">Female</label>
+                <label><input class="input-radio" type="radio" name="gender" value="Other">Other</label></br>
+                </br>Email id: </br>
+                <input class="form1" id="empEmail" type="email" placeholder="Email" required></br>
+                Password: </br>
+                <input class="form1" id="empPassword" type="password" placeholder="Password" required></br>
+                Confirm Password: </br>
+                <input class="form1" id="confirmPassword" type="password" placeholder="Confirm Password"></br>
+                Contact Number: </br>
+                <input class="form1" id="empPhoneNumber" type="number" placeholder="Contact Number"></br>
+                <input class="input-button" type="submit" value="Submit" onclick="return empRegister()">
+                <input class="input-button" type="reset"></br>
+            </fieldset>
+        </form>
+    </div>
+    <div>
+        <form id="vehicleForm">
+            <fieldset id="fieldset2">
+                <legend id="legend">Vehicle Details:</legend>
+                Vehicle Name: </br>
+                <input class="form1" type="text" placeholder="Name"></br>
+                Type: </br>
+                <select class="input-dropdown" id="type" name="type">
+                    <option>Cycle</option>
+                    <option>MotorCycle</option>
+                    <option>Four Wheelers</option>
+                </select class="form1"></br>
+                Vehicle number </br>
+                <input class="form1" id="vehicleNumber" type="text" placeholder="Vehicle Number"></br>
+                Emplyee Id: </br>
+                <input class="form1" id="employeeId" type="text" placeholder="Employee Id" readonly></br>
+                Identification: </br>
+                <textarea class="form1" placeholder="Identification" rows="3"></textarea class="form1"></br>
+                <input class="input-button" type="submit" value="Submit" onclick="vehicleRegister()">
+                <input class="input-button" type="reset"></br>
+            </fieldset>
+        </form>
+    </div>
+
+    <div>
+        <form>
+            <fieldset id="fieldset3">
+                <legend id="legend">Passes:</legend>
+                <label><input class="input-radio" id="daily_r" type="radio" name="pass" value="daily">Daily</label>
+                <input type="text" class="form3" id="daily" placeholder="00" disabled></br>
+                <label><input class="input-radio" id="monthly_r" type="radio" name="pass" value="monthly">Monthly</label>
+                <input type="text" class="form3" placeholder="00" id="monthly" disabled></br>
+                <label><input class="input-radio" id="yearly_r" type="radio" name="pass" value="Yearly">Yearly</label>
+                <input type="text" class="form3" placeholder="00" id="yearly" disabled></br></br>
+                
+                <input type="button" class="currency" id="currency1" value="INR" onclick="displayChargers('inr')">
+                <input type="button" class="currency" id="currency2" value="USD" onclick="displayChargers('usd')">
+                <input type="button" class="currency" id="currency3" value="YEN" onclick="displayChargers('yen')"></br>
+
+                <input class="input-button" type="submit" value="Get Pass" onclick="getPass()">
+            </fieldset>
+        </form>
+    </div>
+    <div>
+        <form>
+
+        </form>
+    </div>
+
+</body>
+
+</html>
