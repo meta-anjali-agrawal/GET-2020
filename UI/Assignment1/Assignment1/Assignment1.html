@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!--Heading starts here-->
+    <div class="heading">
+        <h1>MetaCube Parking</h1>
+    </div>
+    <!--Heading Ends here-->
+
+    <!--Navigation Bar starts from here-->
+    <div class="navbar">
+        <a href="#addEmployee">Add Employee</a>
+        <a href="#addVehicle">Add Vehicle</a>
+        <a href="#giveFeedback">Give Feedback</a>
+        <a href="#pricing">Pricing</a>
+    </div>
+    <!--Navigation Bar ends here-->
+
+    <!--Landing Image starts from here-->
+    <div class="image">
+        <img src="C:\Users\Anjali\Documents\UI\Assignment1/car.jpg" alt="parking image" width=100%/>
+    </div>
+    <!--Landing Image ends here-->
+
+    <!--Add Employee division starts from here-->
+    <div id="addEmployee">
+        <form action="" class="addEmployee">
+            <h1 class="emp">Employee Details</h1>
+            <fieldset>
+
+                <div>
+                    Full Name:
+                    <input type="text" id="fullName" placeholder="Enter Full Name" pattern="[a-zA-Z]+ [a-zA-Z]+|[a-zA-Z]+" required/>
+                </div>
+
+                <div>
+                    Gender:
+                    <label>
+                            <input type="radio" name="gender" id="Male"/>Male
+                        </label>
+                    <label>
+                            <input type="radio" name="gender" id="Female"/>Female
+                        </label>
+                </div>
+
+                <div>
+                    Email:
+                    <input type="email" id="email" placeholder="Enter Email Id" required/>
+                </div>
+
+                <div>
+                    Password:
+                    <input type="password" id="password" placeholder="Enter password" required/>
+                </div>
+
+                <div>
+                    Confirm Password:
+                    <input type="password" id="confirmPassword" placeholder="Re-enter Password" required/>
+                </div>
+
+                <div>
+                    Contact Number:
+                    <input type="tel" id="telephone" placehollder="Enter Contact Number" pattern="[+]?[0-9]+" required/>
+                </div>
+
+                <div>
+                    <input type="submit" value="Submit" />
+                </div>
+
+            </fieldset>
+        </form>
+    </div>
+    <!--Add Employee division ends here-->
+
+    <!--Add Vehicle division starts from here-->
+    <div id="addVehicle">
+        <form action="" class="addVehicle">
+            <h1 class="vehicle">Vehicle Details</h1>
+            <fieldset>
+
+                <div>
+                    Vehicle Make(Company):
+                    <input type="text" id="vehicleName" placeholder="Enter Vehicle Name" required/>
+                </div>
+
+                <div>
+                    Vehicle Model:
+                    <input type="text" id="vehicleModel" placeholder="Enter Vehicle Model" required/>
+                </div>
+
+                <div>
+                    Vehicle Type:
+                    <select id="vehicleType" name="type">
+                        <option>Cycle</option>
+                        <option>MotorCycle</option>
+                        <option>Four Wheelers</option>
+                    </select>
+                </div>
+
+                <div>
+                    Vehicle Number:
+                    <input type="text" id="vehicleNumber" placeholder="Format: AB-01-CD-1234" pattern="[A-Z]{2}-[0-9]{2}-[A-Z]{2}-[0-9]{4}" required/>
+                </div>
+
+                <div>
+                    Employee Id:
+                    <input type="text" id="empId" placeholder="Employee Id" required/>
+                </div>
+
+                <div>
+                    Identification:
+                    <textarea id="vehicalIdentification" cols="30" rows="2" placeholder=" Color, mark, visible accessory etc." required></textarea>
+                </div>
+
+                <div>
+                    <input type="submit" value="Submit">
+                </div>
+
+            </fieldset>
+        </form>
+    </div>
+    <!--Add Vehicle division ends here-->
+
+    <!--Give Feedback division starts from here-->
+    <div id="giveFeedback">
+        <form class="giveFeedback">
+            <h1 class="feedback">Give Feedback</h1>
+            <fieldset>
+
+                <div>
+                    Name:
+                    <input type="text" id="empName" placeholder="Enter Name" required/>
+                </div>
+
+                <div>
+                    Email:
+                    <input type="email" id="empEmail" placeholder="Enter email" required/>
+                </div>
+
+                <div>
+                    Subject:
+                    <input type="text" id="subject" placeholder="Enter Subject" required/>
+                </div>
+
+                <div>
+                    Feedback:
+                    <textarea id="feedback" placeholder="Enter Message" cols="30" rows="3"></textarea>
+                </div>
+
+                <div>
+                    <input type="button" value="Send Email">
+                </div>
+
+            </fieldset>
+        </form>
+    </div>
+    <!--Give Feedback division ends here-->
+
+    <!--Pricing division starts from here-->
+    <div id="pricing">
+
+        <h1>Price</h1>
+
+        <fieldset id="Cycle">
+            <label>CYCLE</label><br>
+            <input type="text" value="$100/month" readonly/><br>
+            <label>$5 Daily</label><br>
+            <label>$100 Monthly</label><br>
+            <label>$500 Yearly</label><br>
+            <input type="button" value="Purchase Now">
+        </fieldset>
+
+        <fieldset id="MotorCycle">
+            <label>MOTORCYCLE</label><br>
+            <input type="text" value="$200/month" readonly/><br>
+            <label>$10 Daily</label><br>
+            <label>$200 Monthly</label><br>
+            <label>$1000 Yearly</label><br>
+            <input type="button" value="Purchase Now">
+        </fieldset>
+
+        <fieldset id="FourWheelers">
+            <label>FOUR WHEELERS</label><br>
+            <input type="text" value="$500/month" readonly/><br>
+            <label>$20 Daily</label><br>
+            <label>$500 Monthly</label><br>
+            <label>$3500 Yearly</label><br>
+            <input type="button" value="Purchase Now">
+        </fieldset>
+
+    </div>
+    <!--Pricing division ends here-->
+
+</body>
+
+</html>
