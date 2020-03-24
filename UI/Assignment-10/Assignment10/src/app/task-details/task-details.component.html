@@ -1,0 +1,43 @@
+<div id="taskDetails" class="m-5">
+    <div class="m-3">
+        <h3>Task Details</h3>
+    </div>
+    <div class="content">
+        <div class="m-2">
+            <label>Task Name:</label>
+            <span>{{task.taskName}}</span>
+        </div>
+
+        <div class="m-2">
+            <label>Task Description:</label>
+            <span>{{task.taskDescription}}</span>
+        </div>
+
+        <div class="m-2">
+            <label>Task Priority:</label>
+            <span>{{task.taskPriority}}</span>
+        </div>
+
+        <div class="m-2">
+            <label>Task status:</label>
+            <span>{{task.status}}</span>
+        </div>
+
+        <div class="m-2">
+            <label>Task Creation Date:</label>
+            <span>{{task.creationDate}}</span>
+        </div>
+
+        <div class="m-2">
+            <label>Task Completion Date:</label>
+            <span>{{task.completionDate}}</span>
+        </div>
+
+    </div>
+
+    <div class="m-2">
+        <button class="m-2" type="submit" (click)="deleteTask()">Delete</button>
+        <button class="m-2" type="submit" (click)="editTask()">Edit</button>
+    </div>
+
+</div>
