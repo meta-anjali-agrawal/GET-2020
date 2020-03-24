@@ -1,0 +1,47 @@
+<div id="bottom" class="d-flex flex-row flex-wrap justify-content-between">
+    <div class="divs col-md-3 col-10" id="newTaskDiv">
+        <h3>NEW</h3>
+        <div>
+            <div id="taskDiv" *ngFor="let task of taskList">
+                <a [routerLink]="['/task-details/',task.creationDate]">
+                    <div *ngIf="task.status == 'NEW'">
+                        <div id="{{task.taskPriority}}" class="p-3 m-4">
+                            <span class="taskHead">{{task.taskName}}</span><br>
+                            <span>{{task.taskDescription}}</span><br>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="divs col-md-3 col-10 pt-4" id="inProcessTaskDiv">
+        <h3>IN PROGRESS</h3>
+        <div>
+            <div id="taskDiv" *ngFor="let task of taskList">
+                <a [routerLink]="['/task-details/',task.creationDate]">
+                    <div *ngIf="task.status == 'IN PROGRESS'">
+                        <div id="{{task.taskPriority}}" class="p-3 m-4">
+                            <span class="taskHead">{{task.taskName}}</span><br>
+                            <span>{{task.taskDescription}}</span><br>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="divs col-md-3 col-10 pt-4" id="completedTaskDiv">
+        <h3>COMPLETED</h3>
+        <div>
+            <div id="taskDiv" *ngFor="let task of taskList">
+                <a [routerLink]="['/task-details/',task.creationDate]">
+                    <div *ngIf="task.status == 'COMPLETED'">
+                        <div id="{{task.taskPriority}}" class="p-3 m-4">
+                            <span class="taskHead">{{task.taskName}}</span><br>
+                            <span>{{task.taskDescription}}</span><br>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

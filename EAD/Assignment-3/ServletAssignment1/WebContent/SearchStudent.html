@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="ISO-8859-1">
+		<title>Search Student</title>
+		<link rel="stylesheet" href="addStudentDetailsStyles.css">
+	</head>
+	<body>
+		<form action="SearchStudentServlet" method="get">
+        <fieldset>
+        Class
+				<select name="classOfStudent">
+					<option>1</option>
+					<option>2</option>
+					<option>3</option>
+					<option>4</option>
+					<option>5</option>
+					<option>6</option>
+					<option>7</option>
+					<option>8</option>
+					<option>9</option>
+					<option>10</option>
+					<option>11</option>
+					<option>12</option>
+				</select>
+				<br>
+            <legend>Search</legend>
+            <div class="form1">
+            First Name:
+            	<input class="form1" id="empFirstName" type="text" name="firstName" placeholder="First Name" />
+            </div>
+            <br>
+            
+            <div class="form1">
+            Last Name:
+            	<input class="form1" id="empLastName" type="text" name="lastName" placeholder="Last Name" />
+            </div>
+            <br>
+            
+            <input class="input-button" id="submitButton" type="submit" value="Search" />
+        </fieldset>
+        <table>
+			<tr>
+				<th><a href="addStudentDetail.html">Add Student Details</a></th>
+				<th><a href="ViewStudentServlet">Show all Students</a></th>
+			</tr>
+		</table>
+    </form>
+		
+	</body>
+</html>
