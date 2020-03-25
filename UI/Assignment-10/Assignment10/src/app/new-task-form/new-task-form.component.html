@@ -1,0 +1,19 @@
+<div id="newTaskForm" class="pt-4 mt-3">
+    <form [formGroup]="formdata" (ngSubmit)="onClickSubmit(formdata.value)">
+        <input type="text" class="fortextbox p-2 m-3" name="taskTitle" placeholder="Task Title" formControlName="taskName">
+        <br />
+
+        <input type="text" class="fortextbox p-2 m-3" name="taskDescription" placeholder="Task Description" formControlName="taskDescription">
+        <br />
+
+        <select formControlName="priority" name="Priority" class="fortextbox p-2 m-3">
+         <option value="" disabled selected>Select Task Priority</option>
+         <option value="High">High</option>
+         <option value="Medium">Medium</option>
+         <option value="Low">Low</option>
+      </select> <br />
+
+
+        <input type="submit" [disabled]="!formdata.valid" class="forsubmit p-2 m-3" value="Add Task">
+    </form>
+</div>
