@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="ISO-8859-1">
+		<title>Student Details</title>
+		<link rel="stylesheet" href="addStudentDetailsStyles.css">
+		<script src="addStudentJS.js"></script>
+	</head>
+<body>
+	<div>
+		<form action="AddStudentServlet" method="post">
+			<div>
+				<fieldset id="fieldset1">
+				
+					<legend>Student Details</legend>
+					
+					<div class="form1">
+					First Name:
+						<input class="form1" type="text" id="fname" placeholder="First Name" name="firstName">
+					</div><br>
+					
+					<div class="form1">
+					Last Name:
+						<input class="form1" type="text" id="lname" placeholder="Last Name" name="lastName">
+					</div><br>
+					
+					<div class="form1">
+					Father's Name:
+						<input class="form1" type="text" id="father_name" placeholder="Father's Name" name="fatherName">
+					</div><br>
+					
+					<div class="form1">
+					Email Id:
+						<input class="form1" type="email" id="email" placeholder="Email Id" name="email">
+					</div><br>
+					
+					<div class="form1">
+					Class:
+						<input class="form1" type="text" id="class" placeholder="Class" name="classOfStudent">
+					</div><br>
+					
+					<div class="form1">
+					Age:
+						<input class="form1" type="number" id="age" placeholder="Age" name="age">
+					</div><br>
+					
+					<div>
+						<input class="input-button" type="submit" value="Submit" onclick="return register()">
+						<input class="input-button" type="reset" value="Reset">
+					</div>
+					
+				</fieldset>
+			</div>
+		</form>
+		<table>
+			<tr>
+				<th><a href="ViewStudentServlet">Show all Students</a></th>
+				<th><a href="SearchStudent.html">Search Student</a></th>
+			</tr>
+		</table>
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,135 @@
+body {
+    background-color: whitesmoke;
+}
+
+.heading {
+    background-color: #02256c;
+    padding: 10px;
+    text-align: center;
+    color: #ffffff;
+    font-size: xx-large;
+}
+
+.navbar {
+    background-color: whitesmoke;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    border-bottom-style: solid;
+    border-width: 2px;
+}
+
+.navbarElement {
+    display: inline-block;
+    padding: 10px 100px;
+}
+
+.navbarElement a {
+    color: black;
+}
+
+.navbarElement:hover {
+    background-color: #eaeefd;
+}
+
+a {
+    font-size: x-large;
+}
+
+.collapse {
+    width: 70%;
+    margin: auto;
+    padding: 30px 0px;
+}
+
+.collapseHeading {
+    font-size: xx-large;
+    background-color: #02256c;
+    color: white;
+}
+
+.form {
+    padding: 20px;
+    background-color: #eaeefd;
+    border-color: #02256c;
+    border-style: solid;
+    border-top-style: hidden;
+    border-width: 2px;
+}
+
+.formField {
+    /* padding: 10px; */
+    width: 45%;
+    margin: auto;
+    font-weight: bold;
+    font-size: large;
+    font-style: italic;
+}
+
+.gender {
+    font-weight: normal;
+    font-style: normal;
+}
+
+input,
+select,
+textarea {
+    border-radius: 10px;
+    border-color: #02256c;
+    border-style: solid;
+    border-width: 1px;
+    width: 100%;
+    padding: 8px;
+    margin: 10px 30px;
+    outline: none;
+}
+
+.formCardField {
+    border-radius: 60%;
+    width: 40%;
+    padding: 20px;
+    border-width: 2px;
+    font-weight: bold;
+    font-size: medium;
+}
+
+input[type=radio] {
+    width: auto;
+}
+
+.formButton {
+    width: 20%;
+    margin: auto;
+}
+
+.formCardButton {
+    width: 55%;
+    margin: auto;
+}
+
+input[type=button],
+input[type=submit] {
+    border-radius: 5px;
+    background-color: #02256c;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.priceCard {
+    display: inline-block;
+    width: 30%;
+    border-color: #02256c;
+    border-style: solid;
+    border-width: 2px;
+    padding: 11px;
+    background-color: white;
+}
+
+.priceCardHeading {
+    font-weight: bold;
+    text-align: center;
+    font-size: large;
+}
