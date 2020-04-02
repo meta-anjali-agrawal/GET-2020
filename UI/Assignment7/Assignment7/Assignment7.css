@@ -1,0 +1,104 @@
+body {
+    background-color: rgb(234, 238, 253);
+}
+
+.heading {
+    text-align: center;
+    background-color: black;
+    margin: 0;
+    padding: 0;
+}
+
+.meta {
+    color: white;
+    display: inline-block;
+}
+
+.cube {
+    color: rgb(0, 169, 227);
+    display: inline-block;
+}
+
+#legend {
+    font-size: xx-large;
+    padding-bottom: 20px;
+}
+
+fieldset {
+    background-color: white;
+    width: 70%;
+    margin: auto;
+    font-size: large;
+}
+
+form {
+    width: 70%;
+    margin: auto;
+    padding-bottom: 50px;
+}
+
+.form1 {
+    width: 70%;
+    margin: 10px 10px;
+    padding-left: 175px;
+    border-radius: 30px 15px;
+    height: 25px;
+    outline: none;
+}
+
+.form3 {
+    width: 30%;
+    margin: 10px 10px;
+    padding-left: 175px;
+    border-radius: 30px;
+    height: 25px;
+    outline: none;
+}
+
+.input-dropdown {
+    width: 97%;
+    margin: 10px 10px;
+    padding-left: 175px;
+    border-radius: 50px 15px;
+    height: 25px;
+    outline: none;
+}
+
+.input-radio {
+    margin: 10px 55px;
+    width: auto;
+    outline: none;
+}
+
+.currency {
+    margin: 10px 17px;
+    width: calc(50%-50px);
+    padding: 10px 70px;
+    border-radius: 15px;
+    background-color: rgb(73, 213, 68);
+}
+
+.input-button {
+    margin: 10px 65px;
+    width: calc(50%-50px);
+    padding: 10px 70px;
+    border-radius: 15px;
+    background-color: rgb(68, 115, 213);
+    outline: none;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+}
+
+#messages,
+#vehicleMessages {
+    width: 90%;
+    margin: auto;
+    padding-bottom: 10px;
+    padding: 10px;
+    font-size: larger;
+    font-weight: bold;
+    color: rgb(68, 115, 213);
+}
