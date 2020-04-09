@@ -1,0 +1,259 @@
+/* * {
+    border: 1px solid black;
+} */
+
+body {
+    margin: 0px;
+}
+
+.head {
+    background-size: 100% 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 0px 10px;
+}
+
+.social-icons i {
+    color: white;
+    padding: 0px 10px;
+}
+
+.headerContent {
+    display: flex;
+    flex-direction: row;
+}
+
+.home {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+}
+
+.homeHeading {
+    color: white;
+    font-weight: bold;
+    font-size: 55px;
+    padding: 100px 0px 20px 150px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.homeImage {
+    width: 50%;
+    display: flex;
+    align-items: center;
+}
+
+.button {
+    width: 55%;
+}
+
+img {
+    height: 80%;
+}
+
+.redButton,
+.blueButton {
+    padding: 10px;
+    background-color: tomato;
+    color: white;
+    font-weight: bold;
+    border: none;
+}
+
+.blueButton {
+    background-color: royalblue;
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+}
+
+.content section {
+    margin: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.content>section>i {
+    color: tomato;
+    padding-right: 20px;
+}
+
+.heading {
+    color: royalblue;
+    text-align: center;
+    font-size: 22px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.heading span {
+    color: grey;
+}
+
+.image img {
+    margin: 0% 18%;
+}
+
+.ssContent {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.ssContent div {
+    width: 50%;
+}
+
+.imageCloudy,
+.imageSunny,
+.imageRainy {
+    display: flex;
+    flex-direction: row;
+}
+
+.imageCloudy h1,
+.imageSunny h1,
+.imageRainy h1 {
+    color: lightgrey;
+    writing-mode: vertical-lr;
+    position: absolute;
+    margin: 5% 27%;
+    font-size: 200px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: lighter;
+}
+
+.imageCloudy img,
+.imageSunny img,
+.imageRainy img {
+    position: relative;
+    margin: 68px;
+    margin-left: 175px;
+    margin-right: 0px;
+}
+
+.alignContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.alignContent section h1 {
+    font-size: 40px;
+}
+
+.alignContent section p {
+    width: 78%;
+    font-size: 25px;
+    font-weight: 2px;
+    color: grey;
+}
+
+.alignContent div img {
+    margin: 0;
+}
+
+.reviewContent {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.reviewContent section {
+    width: 40%;
+    padding: 20px;
+}
+
+.reviewContent i {
+    color: royalblue;
+}
+
+.reviewContent p {
+    font-size: large;
+    font-weight: bold;
+}
+
+.fas.fa-quote-right {
+    margin-left: 515px;
+}
+
+.download {
+    display: flex;
+    flex-direction: row;
+}
+
+.download .imageDownload {
+    width: 50%;
+}
+
+.downloadContent {
+    align-self: center;
+    width: 40%;
+    margin: 0px 120px;
+}
+
+.downloadContent h1 {
+    color: white;
+    font-weight: bolder;
+    font-size: xx-large;
+}
+
+.downloadContent p {
+    width: 70%;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.downloadContent .image {
+    display: flex;
+    flex-direction: row;
+    width: 20px;
+}
+
+.imageDownload img {
+    margin-top: 60px;
+    width: 70%;
+}
+
+footer {
+    background-color: rgb(66, 76, 88);
+}
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 30px;
+    padding-bottom: 40px;
+}
+
+hr {
+    width: 80%;
+}
+
+footer section {
+    padding-top: 30px;
+    margin-left: 45%;
+    color: gray;
+}

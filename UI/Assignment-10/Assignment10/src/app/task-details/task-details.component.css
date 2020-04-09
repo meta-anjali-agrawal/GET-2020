@@ -1,0 +1,17 @@
+#taskDetails {
+    text-align: center;
+    border: solid black;
+    background-color: lightblue;
+}
+
+.content {
+    background-color: lavender;
+}
+
+label {
+    font-weight: bold;
+}
+
+span {
+    padding-left: 10px;
+}
